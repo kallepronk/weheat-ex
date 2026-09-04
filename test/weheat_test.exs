@@ -5,7 +5,6 @@ defmodule WeheatTest do
 
   @fixtures Path.expand("fixtures", __DIR__)
 
-  # Serves a fixture and hands the captured request back to the test process.
   defp client(fixture) do
     test_pid = self()
 

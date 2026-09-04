@@ -43,7 +43,6 @@ defmodule Weheat.DTO do
 
   defp cast_value(_type, value), do: value
 
-  # The backend emits ISO 8601, sometimes without a zone. Zone-less means UTC per the API docs.
   defp parse_datetime(value) do
     case DateTime.from_iso8601(value) do
       {:ok, dt, _offset} ->
