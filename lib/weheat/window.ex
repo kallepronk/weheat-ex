@@ -16,6 +16,6 @@ defmodule Weheat.Window do
   @doc "Returns the reading at 1-based `index`, or nil when out of range."
   @spec at([number()], pos_integer()) :: number() | nil
   def at(readings, index) do
-    Enum.at(readings, index)
+    Enum.at(readings, index - 1)
   end
 end
