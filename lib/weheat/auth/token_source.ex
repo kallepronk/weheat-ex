@@ -66,7 +66,6 @@ defmodule Weheat.Auth.TokenSource do
     end
   end
 
-  # A refresh-token-only seed is treated as already expired so the first call refreshes.
   defp seed(refresh_token),
     do: %Weheat.Auth.Token{
       access_token: nil,
